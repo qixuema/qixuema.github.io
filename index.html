@@ -60,6 +60,49 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+    <tr onmouseout="genudc_stop()" onmouseover="genudc_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='genudc_image'><video  width=100% muted autoplay loop>
+          <source src="images/genudc.png" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/genudc.png' width=100%>
+        </div>
+        <script type="text/javascript">
+          function genudc_start() {
+            document.getElementById('genudc_image').style.opacity = "1";
+          }
+
+          function genudc_stop() {
+            document.getElementById('genudc_image').style.opacity = "0";
+          }
+          genudc_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://qixuema.github.io/">
+          <span class="papertitle">GenUDC: High Quality 3D Mesh Generation With Unsigned Dual Contouring Representation</span>
+        </a>
+        <br>
+        <a href="https://scholar.google.com/citations?user=_-R8Wn8AAAAJ&hl=zh-CN">Ruowei Huang</a>,
+        <a href="https://openreview.net/profile?id=~Jiaqi_Li13">Jiaqi Li</a>,
+        <a href="https://openreview.net/profile?id=~Dan_Zeng4">Dan Zeng</a>,
+				<strong>Xueqi Ma</strong>, 
+        <a href="https://openreview.net/profile?id=~Xu_Zixiang1">Zixiang Xu</a>,
+        <a href="https://openreview.net/profile?id=~Jianwei_Zhang6">Jianwei Zhang</a>,
+        <a href="https://openreview.net/profile?id=~Qijun_Zhao1">Qijun Zhao</a>,
+        <br>
+        <em>ACM MM</em>, 2024
+        <br>
+        <p></p>
+        <p>
+        3D generative models aim to create detailed and realistic meshes, but current methods face memory and surface realism issues. The GenUDC framework solves these problems using Unsigned Dual Contouring (UDC) for mesh representation.        
+        </p>
+      </td>
+    </tr>
+
+
 
     <tr onmouseout="wireframe_stop()" onmouseover="wireframe_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
@@ -86,11 +129,11 @@
           <span class="papertitle">Generating 3D House Wireframes with Semantics</span>
         </a>
         <br>
-		    <strong>Xueqi Ma</strong>,
-        <a href="https://yilinliu77.github.io/">Yilin Liu</a>,
-	<a href="https://github.com/wenjune">Wenjun Zhou</a>,
-	<a href="https://scholar.google.com/citations?user=_-R8Wn8AAAAJ&hl=zh-CN">Ruowei Huang</a>,
-        <a href="https://vcc.tech/~huihuang">Hui Huang</a>*   
+          <strong>Xueqi Ma</strong>,
+          <a href="https://yilinliu77.github.io/">Yilin Liu</a>,
+          <a href="https://github.com/wenjune">Wenjun Zhou</a>,
+	        <a href="https://scholar.google.com/citations?user=_-R8Wn8AAAAJ&hl=zh-CN">Ruowei Huang</a>,
+          <a href="https://vcc.tech/~huihuang">Hui Huang</a>*   
         <br>
         <em>ECCV</em>, 2024
         <br>
