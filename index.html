@@ -60,6 +60,53 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+
+    <tr onmouseout="clr_wire_stop()" onmouseover="clr_wire_start()">
+      <td style="padding:0px 0px 20px 20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='clr_wire_image'><video  width=100% muted autoplay loop>
+          <source src="images/clr_wire.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/clr_wire.png' width=100%>
+        </div>
+        <script type="text/javascript">
+          function clr_wire_start() {
+            document.getElementById('clr_wire_image').style.opacity = "1";
+          }
+
+          function clr_wire_stop() {
+            document.getElementById('clr_wire_image').style.opacity = "0";
+          }
+          clr_wire_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://vcc.tech/research/2025/CLRWire">
+          <span class="papertitle">CLR-Wire: Towards Continuous Latent Representations for 3D Curve Wireframe Generation</span>
+        </a>
+        <br>
+          <strong>Xueqi Ma</strong>,
+          <a href="https://yilinliu77.github.io/">Yilin Liu</a>,
+          <a href="https://github.com/Alone-gao">Tianlong Gao</a>,
+          <a href="https://scholar.google.com/citations?user=PWoil2gAAAAJ&hl=zh-CN">Qirui Huang</a>,
+          <a href="https://vcc.tech/~huihuang">Hui Huang</a>*   
+        <br>
+        <em><a href="https://s2025.siggraph.org/">SIGGRAPH 2025</a></em>
+        <br>
+        <a href="https://vcc.tech/research/2025/CLRWire">Project page</a>,
+        <a href="https://arxiv.org/abs/2504.19174">ArXiv</a>
+        <!-- / -->
+        <!-- <a href="https://www.youtube.com/xxxxx">video</a> -->
+        <!-- / -->
+        <!-- <a href="xxxx">Paper</a> -->
+        <p></p>
+        <p>
+          Existing methods for generating 3D curve-based wireframes typically handle geometry and topology separately, leading to inefficiencies and inconsistent representations. We propose CLR-Wire, a unified continuous latent representation that jointly encodes geometric curves and their topological connections, enabling coherent generation of complex 3D shapes.
+        </p>
+      </td>
+    </tr>
+
     <tr onmouseout="genudc_stop()" onmouseover="genudc_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
@@ -105,7 +152,7 @@
 
 
     <tr onmouseout="wireframe_stop()" onmouseover="wireframe_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
+      <td style="padding:0px 20px 20px 20px;width:25%;vertical-align:middle">
         <div class="one">
           <div class="two" id='wireframe_image'><video  width=100% muted autoplay loop>
           <source src="images/house_wireframe.mp4" type="video/mp4">
@@ -138,10 +185,8 @@
         <em><a href="https://eccv.ecva.net/">ECCV 2024</a></em>
         <br>
         <a href="https://vcc.tech/research/2024/3DWire">Project page</a>,
-        <!-- / -->
-        <!-- <a href="https://www.youtube.com/xxxxx">video</a> -->
-        <!-- / -->
-        <a href="https://arxiv.org/abs/2407.12267">ArXiv</a>
+        <a href="https://youtu.be/EMzXQeH7hOo?si=fs7LpqngwqZVE94Q">Video</a>,
+        <a href="https://link.springer.com/chapter/10.1007/978-3-031-72670-5_13">Paper</a>
         <p></p>
         <p>
         We present a new approach for generating 3D house wireframes with semantic enrichment using an autoregressive model. Unlike conventional generative models that independently process vertices, edges, and faces, our approach employs a unified wire-based representation for improved coherence in learning 3D wireframe structures.         
@@ -151,7 +196,7 @@
 
 
     <tr onmouseout="road_stop()" onmouseover="road_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
+      <td style="padding:0px 20px 20px 20px;width:25%;vertical-align:middle">
         <div class="one">
           <div class="two" id='road_image'><video  width=100% muted autoplay loop>
           <source src="images/road.png" type="video/mp4">
