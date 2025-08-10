@@ -2,3 +2,4 @@
 preprocessing/
 data/images/
 gallery/labs/images/raws/
+.env

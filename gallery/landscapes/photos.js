@@ -1,6 +1,8 @@
-// 缩略图/大图目录（相对本 index.html）
-const THUMBS_DIR = 'landscapes/images/thumbs/';
-const FULLS_DIR  = 'landscapes/images/fulls/';
+const CDN_ORIGIN = 'https://qixuema.oss-cn-shenzhen.aliyuncs.com/gallery';
+const ALBUM = 'landscapes';
+
+const THUMBS_DIR = `${CDN_ORIGIN}/${ALBUM}/images/thumbs/`;
+const FULLS_DIR  = `${CDN_ORIGIN}/${ALBUM}/images/fulls/`;
 
 // 只需维护这个数组即可
 const PHOTOS = [

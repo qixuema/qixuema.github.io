@@ -1,6 +1,9 @@
 // photos.js
-const THUMBS_DIR = 'scenes/images/thumbs/';
-const FULLS_DIR  = 'scenes/images/fulls/';
+const CDN_ORIGIN = 'https://qixuema.oss-cn-shenzhen.aliyuncs.com/gallery';
+const ALBUM = 'scenes';
+
+const THUMBS_DIR = `${CDN_ORIGIN}/${ALBUM}/images/thumbs/`;
+const FULLS_DIR  = `${CDN_ORIGIN}/${ALBUM}/images/fulls/`;
 
 const PHOTOS = [
   {

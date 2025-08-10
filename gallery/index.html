@@ -23,6 +23,23 @@
 
   </div>
 
+  <script>
+    const params = new URL(location.href).searchParams;
+    const cat = (params.get('cat') || 'landscapes').toLowerCase();
+
+    if (cat === 'labs') {
+      const key = 'gallery_labs_auth_ok';
+      if (!localStorage.getItem(key)) {
+        const pass = prompt('Enter password:');
+        if (pass !== 'vcc') {
+          document.body.innerHTML = '<h2>Are you from VCC Lab?</h2>';
+          throw new Error('Wrong password');
+        }
+        localStorage.setItem(key, 'yes');
+      }
+    }
+  </script>
+
   <!-- 主题依赖 -->
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/jquery.poptrox.min.js"></script>
