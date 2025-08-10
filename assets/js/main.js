@@ -49,13 +49,12 @@ async function renderPublications(){
 
       const authors = document.createElement("div");
       authors.className = "authors";
-      // authors.innerHTML = item.authors_html; // 允许你在 JSON 内标记<strong>自己</strong>
       if (Array.isArray(item.authors)) {
         authors.innerHTML = item.authors.map(a => {
           let name = a.name;
-          if (a.self) name = `<strong>${name}</strong>`; // 自己加粗
+          if (a.self) name = `<strong>${name}</strong>`;
           if (a.url) name = `<a href="${a.url}" target="_blank" rel="noopener">${name}</a>`;
-          if (a.star) name += '*'; // 通讯作者加星号
+          if (a.star) name += '*';
           return name;
         }).join(', ');
       } else {

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+  <div id="wrapper">
+
+    <!-- Header（链接只切换 URL 参数，不跳页面文件） -->
+    <header id="header">
+      <h1><a href="?cat=landscapes"><strong>Landscapes</strong></a></h1> &nbsp;/&nbsp;
+      <h1><a href="?cat=scenes"><strong>Scenes With People</strong></a></h1> &nbsp;/&nbsp;
+      <h1><a href="?cat=labs"><strong>Lab group photos</strong></a></h1>
+    </header>
+
+    <!-- Main: 由 JS 注入 -->
+    <div id="main"></div>
+
+  </div>
+
+  <!-- 主题依赖 -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/jquery.poptrox.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/breakpoints.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+
+  <!-- 通用渲染逻辑（根据 ?cat 动态加载对应目录的 photos.js） -->
+  <script>
+    // 解析 URL 参数；默认 landscapes
+    function getCategory() {
+      const u = new URL(location.href);
+      return (u.searchParams.get('cat') || 'landscapes').toLowerCase();
+    }
+
+    // 动态加载脚本并在加载完成后执行回调
+    function loadScript(src) {
+      return new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = src;
+        s.onload = resolve;
+        s.onerror = () => reject(new Error('Failed to load ' + src));
+        document.head.appendChild(s);
+      });
+    }
+
+    function renderGallery() {
+      if (typeof PHOTOS === 'undefined') {
+        console.error('PHOTOS is not defined. Check photos.js.');
+        return;
+      }
+      const main = document.getElementById('main');
+      const frag = document.createDocumentFragment();
+
+      const altOf = (p) => p.title || p.desc || p.file.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ');
+
+      for (const p of PHOTOS) {
+        const article = document.createElement('article');
+        article.className = 'thumb';
+
+        const a = document.createElement('a');
+        a.className = 'image';
+        a.href = FULLS_DIR + p.file;
+
+        const img = document.createElement('img');
+        img.src = THUMBS_DIR + p.file;
+        img.alt = altOf(p);
+        img.loading = 'lazy';
+        img.decoding = 'async';
+
+        a.appendChild(img);
+        article.appendChild(a);
+
+        if (p.title) {
+          const h2 = document.createElement('h2');
+          h2.textContent = p.title;
+          article.appendChild(h2);
+        }
+        if (p.desc) {
+          const d = document.createElement('p');
+          d.textContent = p.desc;
+          article.appendChild(d);
+        }
+
+        frag.appendChild(article);
+      }
+      main.replaceChildren(frag);
+    }
+
+    function initLightbox() {
+      if (!(window.jQuery && jQuery.fn.poptrox)) return;
+      jQuery(function ($) {
+        $('#main').poptrox({
+          selector: 'article.thumb > a.image',
+          usePopupCaption: true,
+          usePopupCloser: true,
+          usePopupNav: true,
+          usePopupDefaultStyling: false,
+          windowMargin: 50,
+          overlayColor: '#1f2224',
+          overlayOpacity: 0.85,
+          caption: function ($a) {
+            const $card = $a.parent();
+            const t = $card.find('h2').text();
+            const d = $card.find('p').text();
+            return [t, d].filter(Boolean).join(' — ');
+          }
+        });
+      });
+    }
+
+    function removePreload() {
+      document.body.classList.remove('is-preload');
+    }
+
+    (async function boot() {
+      const cat = getCategory(); // landscapes | scenes | labs
+      // 自动改标题
+      document.title = (cat.charAt(0).toUpperCase() + cat.slice(1)) + ' · Gallery';
+      // 动态加载对应目录的 photos.js（该文件需定义 THUMBS_DIR、FULLS_DIR、PHOTOS）
+      try {
+        await loadScript(`./${cat}/photos.js`);
+        renderGallery();
+        initLightbox();
+        removePreload();
+      } catch (e) {
+        console.error(e);
+        document.getElementById('main').innerHTML =
+          `<p style="padding:2rem;color:#ccc">Failed to load data for <code>${cat}</code>. Check <code>${cat}/photos.js</code>.</p>`;
+      }
+    })();
+  </script>
+</body>
+</html>
