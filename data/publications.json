@@ -16,6 +16,7 @@
     "venue_html": "<em><a href=\"https://asia.siggraph.org/2025/\" target=\"_blank\" rel=\"noopener\">SIGGRAPH Asia 2025</a></em>",
     "summary": "This work presents a differentiable-rendering-based method to automatically convert strand-based hair into compact, high-quality hair cards while preserving appearance.",
     "thumb": "images/diff_hair_card.png",
+    "project": "https://arxiv.org/abs/2505.18805",
     "links": [
       { "text": "ArXiv", "href": "https://arxiv.org/abs/2505.18805" }
     ]
@@ -55,6 +56,7 @@
     "summary": "A generative framework leveraging Unsigned Dual Contouring (UDC) to improve mesh quality and memory efficiency.",
     "thumb": "images/genudc.png",
     "video": "",
+    "project": "https://dl.acm.org/doi/10.1145/3664647.3681241",
     "links": [
       { "text": "Paper", "href": "https://dl.acm.org/doi/10.1145/3664647.3681241" }
     ]
@@ -90,6 +92,7 @@
     "summary": "Extracts 3D road network structures from large-scale point clouds via L1 medial axis and flexible constraints.",
     "thumb": "images/road.png",
     "video": "",
+    "project": "https://www.jcad.cn/en/article/doi/10.3724/SP.J.1089.2023-00328",
     "links": [
       { "text": "Paper", "href": "https://www.jcad.cn/en/article/doi/10.3724/SP.J.1089.2023-00328" }
     ]
