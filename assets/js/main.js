@@ -1,281 +1,97 @@
-/*
-	Multiverse by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
-(function($) {
-
-	var	$window = $(window),
-		$body = $('body'),
-		$wrapper = $('#wrapper');
-
-	// Breakpoints.
-		breakpoints({
-			xlarge:  [ '1281px',  '1680px' ],
-			large:   [ '981px',   '1280px' ],
-			medium:  [ '737px',   '980px'  ],
-			small:   [ '481px',   '736px'  ],
-			xsmall:  [ null,      '480px'  ]
-		});
-
-	// Hack: Enable IE workarounds.
-		if (browser.name == 'ie')
-			$body.addClass('ie');
-
-	// Touch?
-		if (browser.mobile)
-			$body.addClass('touch');
-
-	// Transitions supported?
-		if (browser.canUse('transition')) {
-
-			// Play initial animations on page load.
-				$window.on('load', function() {
-					window.setTimeout(function() {
-						$body.removeClass('is-preload');
-					}, 100);
-				});
-
-			// Prevent transitions/animations on resize.
-				var resizeTimeout;
-
-				$window.on('resize', function() {
-
-					window.clearTimeout(resizeTimeout);
-
-					$body.addClass('is-resizing');
-
-					resizeTimeout = window.setTimeout(function() {
-						$body.removeClass('is-resizing');
-					}, 100);
-
-				});
-
-		}
-
-	// Scroll back to top.
-		$window.scrollTop(0);
-
-	// Panels.
-		var $panels = $('.panel');
-
-		$panels.each(function() {
-
-			var $this = $(this),
-				$toggles = $('[href="#' + $this.attr('id') + '"]'),
-				$closer = $('<div class="closer" />').appendTo($this);
-
-			// Closer.
-				$closer
-					.on('click', function(event) {
-						$this.trigger('---hide');
-					});
-
-			// Events.
-				$this
-					.on('click', function(event) {
-						event.stopPropagation();
-					})
-					.on('---toggle', function() {
-
-						if ($this.hasClass('active'))
-							$this.triggerHandler('---hide');
-						else
-							$this.triggerHandler('---show');
-
-					})
-					.on('---show', function() {
-
-						// Hide other content.
-							if ($body.hasClass('content-active'))
-								$panels.trigger('---hide');
-
-						// Activate content, toggles.
-							$this.addClass('active');
-							$toggles.addClass('active');
-
-						// Activate body.
-							$body.addClass('content-active');
-
-					})
-					.on('---hide', function() {
-
-						// Deactivate content, toggles.
-							$this.removeClass('active');
-							$toggles.removeClass('active');
-
-						// Deactivate body.
-							$body.removeClass('content-active');
-
-					});
-
-			// Toggles.
-				$toggles
-					.removeAttr('href')
-					.css('cursor', 'pointer')
-					.on('click', function(event) {
-
-						event.preventDefault();
-						event.stopPropagation();
-
-						$this.trigger('---toggle');
-
-					});
-
-		});
-
-		// Global events.
-			$body
-				.on('click', function(event) {
-
-					if ($body.hasClass('content-active')) {
-
-						event.preventDefault();
-						event.stopPropagation();
-
-						$panels.trigger('---hide');
-
-					}
-
-				});
-
-			$window
-				.on('keyup', function(event) {
-
-					if (event.keyCode == 27
-					&&	$body.hasClass('content-active')) {
-
-						event.preventDefault();
-						event.stopPropagation();
-
-						$panels.trigger('---hide');
-
-					}
-
-				});
-
-	// Header.
-		var $header = $('#header');
-
-		// Links.
-			$header.find('a').each(function() {
-
-				var $this = $(this),
-					href = $this.attr('href');
-
-				// Internal link? Skip.
-					if (!href
-					||	href.charAt(0) == '#')
-						return;
-
-				// Redirect on click.
-					$this
-						.removeAttr('href')
-						.css('cursor', 'pointer')
-						.on('click', function(event) {
-
-							event.preventDefault();
-							event.stopPropagation();
-
-							window.location.href = href;
-
-						});
-
-			});
-
-	// Footer.
-		var $footer = $('#footer');
-
-		// Copyright.
-		// This basically just moves the copyright line to the end of the *last* sibling of its current parent
-		// when the "medium" breakpoint activates, and moves it back when it deactivates.
-			$footer.find('.copyright').each(function() {
-
-				var $this = $(this),
-					$parent = $this.parent(),
-					$lastParent = $parent.parent().children().last();
-
-				breakpoints.on('<=medium', function() {
-					$this.appendTo($lastParent);
-				});
-
-				breakpoints.on('>medium', function() {
-					$this.appendTo($parent);
-				});
-
-			});
-
-	// Main.
-		var $main = $('#main');
-
-		// Thumbs.
-			$main.children('.thumb').each(function() {
-
-				var	$this = $(this),
-					$image = $this.find('.image'), $image_img = $image.children('img'),
-					x;
-
-				// No image? Bail.
-					if ($image.length == 0)
-						return;
-
-				// Image.
-				// This sets the background of the "image" <span> to the image pointed to by its child
-				// <img> (which is then hidden). Gives us way more flexibility.
-
-					// Set background.
-						$image.css('background-image', 'url(' + $image_img.attr('src') + ')');
-
-					// Set background position.
-						if (x = $image_img.data('position'))
-							$image.css('background-position', x);
-
-					// Hide original img.
-						$image_img.hide();
-
-			});
-
-		// Poptrox.
-			$main.poptrox({
-				baseZIndex: 20000,
-				caption: function($a) {
-
-					var s = '';
-
-					$a.nextAll().each(function() {
-						s += this.outerHTML;
-					});
-
-					return s;
-
-				},
-				fadeSpeed: 300,
-				onPopupClose: function() { $body.removeClass('modal-active'); },
-				onPopupOpen: function() { $body.addClass('modal-active'); },
-				overlayOpacity: 0,
-				popupCloserText: '',
-				popupHeight: 150,
-				popupLoaderText: '',
-				popupSpeed: 300,
-				popupWidth: 150,
-				selector: '.thumb > a.image',
-				usePopupCaption: true,
-				usePopupCloser: true,
-				usePopupDefaultStyling: false,
-				usePopupForceClose: true,
-				usePopupLoader: true,
-				usePopupNav: true,
-				windowMargin: 50
-			});
-
-			// Hack: Set margins to 0 when 'xsmall' activates.
-				breakpoints.on('<=xsmall', function() {
-					$main[0]._poptrox.windowMargin = 0;
-				});
-
-				breakpoints.on('>xsmall', function() {
-					$main[0]._poptrox.windowMargin = 50;
-				});
-
-})(jQuery);
+// 1) 注入头部/页脚组件，避免每页重复写
+async function inject(id, url){
+  try{
+    const html = await fetch(url, {cache: "no-store"}).then(r => r.text());
+    document.getElementById(id).innerHTML = html;
+  }catch(e){
+    console.error("Failed to inject", id, e);
+  }
+}
+
+// 2) 渲染 publications：从 JSON 读取 -> 生成卡片
+async function renderPublications(){
+  const container = document.getElementById("pub-list");
+  if(!container) return;
+  try{
+    const list = await fetch("data/publications.json", {cache:"no-store"}).then(r=>r.json());
+    const frag = document.createDocumentFragment();
+
+    for(const item of list){
+      const card = document.createElement("article");
+      card.className = "pub-card";
+
+      // 媒体区域（图 + 可选视频覆盖）
+      const media = document.createElement("div");
+      media.className = "media";
+      const img = document.createElement("img");
+      img.src = item.thumb; img.alt = item.title;
+      img.loading = "lazy";
+      media.appendChild(img);
+
+      if(item.video){ // 有视频就加，hover 自动淡入
+        const video = document.createElement("video");
+        video.src = item.video;
+        video.muted = true; video.autoplay = true; video.loop = true; video.playsInline = true;
+        media.appendChild(video);
+      }
+
+      // 文本主体
+      const body = document.createElement("div");
+      body.className = "pub-body";
+
+      const titleLink = document.createElement("a");
+      titleLink.href = item.project || item.paper || "#";
+      titleLink.target = "_blank"; titleLink.rel = "noopener";
+      const titleSpan = document.createElement("span");
+      titleSpan.className = "papertitle";
+      titleSpan.textContent = item.title;
+      titleLink.appendChild(titleSpan);
+
+      const authors = document.createElement("div");
+      authors.className = "authors";
+      // authors.innerHTML = item.authors_html; // 允许你在 JSON 内标记<strong>自己</strong>
+      if (Array.isArray(item.authors)) {
+        authors.innerHTML = item.authors.map(a => {
+          let name = a.name;
+          if (a.self) name = `<strong>${name}</strong>`; // 自己加粗
+          if (a.url) name = `<a href="${a.url}" target="_blank" rel="noopener">${name}</a>`;
+          if (a.star) name += '*'; // 通讯作者加星号
+          return name;
+        }).join(', ');
+      } else {
+        authors.innerHTML = item.authors_html || '';
+      }
+
+      const venue = document.createElement("div");
+      venue.className = "venue";
+      venue.innerHTML = item.venue_html;
+
+      const summary = document.createElement("p");
+      summary.textContent = item.summary;
+
+      const actions = document.createElement("div");
+      actions.className = "actions";
+      for(const link of item.links || []){
+        const a = document.createElement("a");
+        a.href = link.href; a.target = "_blank"; a.rel="noopener";
+        a.textContent = link.text;
+        actions.appendChild(a);
+      }
+
+      body.append(titleLink, authors, venue, actions, summary);
+      card.append(media, body);
+      frag.appendChild(card);
+    }
+
+    container.innerHTML = "";
+    container.appendChild(frag);
+  }catch(e){
+    container.innerHTML = "<p>Failed to load publications.</p>";
+    console.error(e);
+  }
+}
+
+// 页面启动
+inject("site-header", "components/header.html");
+inject("site-footer", "components/footer.html");
+renderPublications();

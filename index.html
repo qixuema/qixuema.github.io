@@ -1,252 +1,77 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+  <meta charset="utf-8" />
+  <title>Xueqi Ma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Xueqi Ma" />
+  <link rel="icon" href="images/favicon/my_favicon.ico" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHq6d2...snip"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+</head>
+<body>
+  <!-- 头部和页脚用组件文件注入，避免重复 -->
+  <header id="site-header"></header>
 
-    <title>Xueqi Ma</title>
-
-    <meta name="author" content="Xueqi Ma">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/my_favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-  </head>
-
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Xueqi Ma
-                </p>
-                <p>
-                  Greetings! My name is Xueqi Sebastian Ma.
-                </p>
-                <p>
-                  I am currently in my third year of a PhD program at <a href="https://en.szu.edu.cn/">Shenzhen University</a>, under the supervision of <a href="https://vcc.tech/~huihuang">Prof. Hui Huang</a>. My research is centered around 3D generation, particularly in the fields of Computer Graphics and Generative Models. Driven by a passion for innovation and a commitment to advancing cutting-edge research, I aim to contribute to the development of new technologies in 3D model reconstruction and generation.                </p>
-                <p>
-                  If you share an interest in computer graphics, I would be delighted to hear from you. Feel free to reach out to me at <a href="mailto:qixuemaa@gmail.com">qixuemaa@gmail.com</a> for any academic discussions.
-                </p>
-                <p>
-                  I eagerly anticipate engaging in discussions with fellow enthusiasts and professionals in the field!
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:qixuemaa@gmail.com"><i class="fa fa-envelope"></i> Email</a> &nbsp;/&nbsp;
-                  <a href="data/CV_XueqiMa.pdf"><i class="fa fa-file-pdf"></i> CV</a> &nbsp;/&nbsp;
-                  <a href="https://scholar.google.com/citations?user=Wk7JEtoAAAAJ&hl=en"><i class="fa fa-graduation-cap"></i> Scholar</a> &nbsp;/&nbsp;
-                  <a href="https://twitter.com/qixuema"><i class="fab fa-twitter"></i> Twitter</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/qixuema/"><i class="fab fa-github"></i> Github</a> &nbsp;/&nbsp;
-                  <a href="https://qixuema.github.io/gallery/landscapes/"><i class="fa fa-image"></i> Gallery</a> <!-- Add this line -->
-                </p>
-              </td>
-              <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/XueqiMa.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/XueqiMa.jpg" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                  I am interested in Computer Graphics, Computer Vision, and Generative Models, particularly in the processing of 3D point clouds and the structural reconstruction and generation of 3D models.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-
-    <tr onmouseout="clr_wire_stop()" onmouseover="clr_wire_start()">
-      <td style="padding:0px 0px 20px 20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='clr_wire_image'><video  width=100% muted autoplay loop>
-          <source src="images/clr_wire.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/clr_wire.png' width=100%>
-        </div>
-        <script type="text/javascript">
-          function clr_wire_start() {
-            document.getElementById('clr_wire_image').style.opacity = "1";
-          }
-
-          function clr_wire_stop() {
-            document.getElementById('clr_wire_image').style.opacity = "0";
-          }
-          clr_wire_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://vcc.tech/research/2025/CLRWire">
-          <span class="papertitle">CLR-Wire: Towards Continuous Latent Representations for 3D Curve Wireframe Generation</span>
-        </a>
-        <br>
-          <strong>Xueqi Ma</strong>,
-          <a href="https://yilinliu77.github.io/">Yilin Liu</a>,
-          <a href="https://github.com/Alone-gao">Tianlong Gao</a>,
-          <a href="https://scholar.google.com/citations?user=PWoil2gAAAAJ&hl=zh-CN">Qirui Huang</a>,
-          <a href="https://vcc.tech/~huihuang">Hui Huang</a>*   
-        <br>
-        <em><a href="https://s2025.siggraph.org/">SIGGRAPH 2025</a></em>
-        <br>
-        <a href="https://vcc.tech/research/2025/CLRWire">Project page</a>,
-        <a href="https://arxiv.org/abs/2504.19174">ArXiv</a>
-        <!-- / -->
-        <!-- <a href="https://www.youtube.com/xxxxx">video</a> -->
-        <!-- / -->
-        <!-- <a href="xxxx">Paper</a> -->
-        <p></p>
+  <main class="container">
+    <section class="intro card">
+      <div class="intro__text">
+        <h1 class="name">Xueqi Ma</h1>
+        <p>Greetings! My name is Xueqi Sebastian Ma.</p>
         <p>
-          Existing methods for generating 3D curve-based wireframes typically handle geometry and topology separately, leading to inefficiencies and inconsistent representations. We propose CLR-Wire, a unified continuous latent representation that jointly encodes geometric curves and their topological connections, enabling coherent generation of complex 3D shapes.
+          I am currently in my fourth year of a PhD program at
+          <a href="https://en.szu.edu.cn/" target="_blank" rel="noopener">Shenzhen University</a>,
+          under the supervision of
+          <a href="https://vcc.tech/~huihuang" target="_blank" rel="noopener">Prof. Hui Huang</a>.
+          My research is centered around 3D generation, particularly in Computer Graphics and Generative Models.
+          Driven by a passion for innovation and a commitment to advancing cutting-edge research, I aim to contribute to the development of new technologies in 3D model reconstruction and generation.
         </p>
-      </td>
-    </tr>
-
-    <tr onmouseout="genudc_stop()" onmouseover="genudc_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='genudc_image'><video  width=100% muted autoplay loop>
-          <source src="images/genudc.png" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/genudc.png' width=100%>
-        </div>
-        <script type="text/javascript">
-          function genudc_start() {
-            document.getElementById('genudc_image').style.opacity = "1";
-          }
-
-          function genudc_stop() {
-            document.getElementById('genudc_image').style.opacity = "0";
-          }
-          genudc_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://dl.acm.org/doi/10.1145/3664647.3681241">
-          <span class="papertitle">GenUDC: High Quality 3D Mesh Generation With Unsigned Dual Contouring Representation</span>
-        </a>
-        <br>
-        <a href="https://scholar.google.com/citations?user=_-R8Wn8AAAAJ&hl=zh-CN">Ruowei Wang</a>,
-        <a href="https://openreview.net/profile?id=~Jiaqi_Li13">Jiaqi Li</a>,
-        <a href="https://openreview.net/profile?id=~Dan_Zeng4">Dan Zeng</a>,
-				<strong>Xueqi Ma</strong>, 
-        <a href="https://openreview.net/profile?id=~Xu_Zixiang1">Zixiang Xu</a>,
-        <a href="https://openreview.net/profile?id=~Jianwei_Zhang6">Jianwei Zhang</a>,
-        <a href="https://openreview.net/profile?id=~Qijun_Zhao1">Qijun Zhao</a>
-        <br>
-        <em><a href="https://2024.acmmm.org/">ACM MM 2024</a></em>
-        <br>
-        <p></p>
         <p>
-        3D generative models aim to create detailed and realistic meshes, but current methods face memory and surface realism issues. The GenUDC framework solves these problems using Unsigned Dual Contouring (UDC) for mesh representation.        
+          If you share an interest in computer graphics, feel free to reach out:
+          <a href="mailto:qixuemaa@gmail.com">qixuemaa@gmail.com</a>
         </p>
-      </td>
-    </tr>
 
+        <nav class="links">
+          <a href="mailto:qixuemaa@gmail.com"><i class="fa fa-envelope"></i> Email</a>
+          <a href="data/CV_XueqiMa.pdf"><i class="fa fa-file-pdf"></i> CV</a>
+          <a href="https://scholar.google.com/citations?user=Wk7JEtoAAAAJ&hl=en" target="_blank" rel="noopener">
+            <i class="fa fa-graduation-cap"></i> Scholar</a>
+          <a href="https://twitter.com/qixuema" target="_blank" rel="noopener"><i class="fab fa-twitter"></i> Twitter</a>
+          <a href="https://github.com/qixuema/" target="_blank" rel="noopener"><i class="fab fa-github"></i> Github</a>
+          <a href="https://qixuema.github.io/gallery/landscapes/" target="_blank" rel="noopener">
+            <i class="fa fa-image"></i> Gallery</a>
+        </nav>
+      </div>
 
+      <div class="intro__avatar">
+        <img src="images/XueqiMa.jpg" alt="Xueqi Ma portrait" loading="lazy" />
+      </div>
+    </section>
 
-    <tr onmouseout="wireframe_stop()" onmouseover="wireframe_start()">
-      <td style="padding:0px 20px 20px 20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='wireframe_image'><video  width=100% muted autoplay loop>
-          <source src="images/house_wireframe.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/house_wireframe.png' width=100%>
-        </div>
-        <script type="text/javascript">
-          function wireframe_start() {
-            document.getElementById('wireframe_image').style.opacity = "1";
-          }
+    <section class="research">
+      <h2>Research</h2>
+      <p>
+        I am interested in Computer Graphics, Computer Vision, and Generative Models, particularly in processing 3D point clouds and structural reconstruction/generation of 3D models.
+      </p>
+    </section>
 
-          function wireframe_stop() {
-            document.getElementById('wireframe_image').style.opacity = "0";
-          }
-          wireframe_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://vcc.tech/research/2024/3DWire">
-          <span class="papertitle">Generating 3D House Wireframes with Semantics</span>
-        </a>
-        <br>
-          <strong>Xueqi Ma</strong>,
-          <a href="https://yilinliu77.github.io/">Yilin Liu</a>,
-          <a href="https://github.com/wenjune">Wenjun Zhou</a>,
-	        <a href="https://scholar.google.com/citations?user=_-R8Wn8AAAAJ&hl=zh-CN">Ruowei Wang</a>,
-          <a href="https://vcc.tech/~huihuang">Hui Huang</a>*   
-        <br>
-        <em><a href="https://eccv.ecva.net/">ECCV 2024</a></em>
-        <br>
-        <a href="https://vcc.tech/research/2024/3DWire">Project page</a>,
-        <a href="https://youtu.be/EMzXQeH7hOo?si=fs7LpqngwqZVE94Q">Video</a>,
-        <a href="https://link.springer.com/chapter/10.1007/978-3-031-72670-5_13">Paper</a>
-        <p></p>
-        <p>
-        We present a new approach for generating 3D house wireframes with semantic enrichment using an autoregressive model. Unlike conventional generative models that independently process vertices, edges, and faces, our approach employs a unified wire-based representation for improved coherence in learning 3D wireframe structures.         
-        </p>
-      </td>
-    </tr>
+    <!-- 论文/项目卡片：由 JS 从 data/publications.json 渲染 -->
+    <section class="pubs" aria-live="polite">
+      <h2>Publications</h2>
+      <!-- <div id="pub-list" class="grid"></div> -->
+      <div id="pub-list" class="pub-list list"></div>
+    </section>
+  </main>
 
+  <footer id="site-footer"></footer>
 
-    <tr onmouseout="road_stop()" onmouseover="road_start()">
-      <td style="padding:0px 20px 20px 20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='road_image'><video  width=100% muted autoplay loop>
-          <source src="images/road.png" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/road.png' width=100%>
-        </div>
-        <script type="text/javascript">
-          function road_start() {
-            document.getElementById('road_image').style.opacity = "1";
-          }
-
-          function road_stop() {
-            document.getElementById('road_image').style.opacity = "0";
-          }
-          road_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://www.jcad.cn/en/article/doi/10.3724/SP.J.1089.2023-00328">
-          <span class="papertitle">Road Network Extraction of 3D Point Cloud Scene Based on L1-medial Extraction and Flexible Constraints</span>
-        </a>
-        <br>
-				<strong>Xueqi Ma</strong>,
-				<a href="https://scholar.google.com/citations?user=MKjgy_UAAAAJ&hl=en">Pengdi Huang</a>,
-				<a href="https://vcc.tech/~huihuang">Hui Huang</a>*		
-        <br>
-        <em><a href="https://www.jcad.cn/indexen.htm">Journal of Computer-Aided Design and Computer Graphics, 2023</a></em>
-        <br>
-        <p></p>
-        <p>
-        This study introduces a method for extracting 3D road network structures from large-scale point cloud scenes, addressing challenges by utilizing L1 medial axis extraction and applying flexible constraints.        
-        </p>
-      </td>
-    </tr>
-  
-  </tbody></table>
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr>
-      <td style="padding:0px">
-        <br>
-        <p style="text-align:right;font-size:small;">
-          I got this great website <a href="https://jonbarron.info/">here</a>.
-        </p>
-      </td>
-    </tr>
-  </tbody></table>
-
-        </td>
-      </tr>
-    </table>
-  </body>
+  <script src="assets/js/main.js" defer></script>
+</body>
 </html>

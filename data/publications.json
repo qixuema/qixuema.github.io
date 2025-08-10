@@ -1,0 +1,97 @@
+[
+  {
+    "title": "DiffHairCard: Auto Hair Card Extraction with Differentiable Rendering",
+    "authors": [
+      { "name": "Zhongtian Zheng", "url": "https://scholar.google.com/citations?user=OUjua5AAAAAJ&hl=en" },
+      { "name": "Tao Huang", "url": "https://dcjmj.github.io/" },
+      { "name": "Haozhe Su", "url": "https://soldierdown.github.io/" },
+      { "name": "Xueqi Ma", "self": true },
+      { "name": "Yuefan Shen", "url": "https://yuefanshen.net/" },
+      { "name": "Tongtong Wang", "url": "https://tongttwang.github.io/" },
+      { "name": "Yin Yang", "url": "https://yangzzzy.github.io/" },
+      { "name": "Xifeng Gao", "url": "https://gaoxifeng.github.io/" },
+      { "name": "Zherong Pan", "url": "https://dyingbrain.github.io/" },
+      { "name": "Kui Wu", "url": "https://kuiwuchn.github.io/", "star": true }
+    ],
+    "venue_html": "<em><a href=\"https://asia.siggraph.org/2025/\" target=\"_blank\" rel=\"noopener\">SIGGRAPH Asia 2025</a></em>",
+    "summary": "This work presents a differentiable-rendering-based method to automatically convert strand-based hair into compact, high-quality hair cards while preserving appearance.",
+    "thumb": "images/diff_hair_card.png",
+    "links": [
+      { "text": "ArXiv", "href": "https://arxiv.org/abs/2505.18805" }
+    ]
+  },
+  {
+    "title": "CLR-Wire: Towards Continuous Latent Representations for 3D Curve Wireframe Generation",
+    "authors": [
+      { "name": "Xueqi Ma", "self": true },
+      { "name": "Yilin Liu", "url": "https://yilinliu77.github.io/" },
+      { "name": "Tianlong Gao", "url": "https://github.com/Alone-gao" },
+      { "name": "Qirui Huang", "url": "https://scholar.google.com/citations?user=PWoil2gAAAAJ" },
+      { "name": "Hui Huang", "url": "https://vcc.tech/~huihuang", "star": true }
+    ],
+    "venue_html": "<em><a href=\"https://s2025.siggraph.org/\" target=\"_blank\" rel=\"noopener\">SIGGRAPH 2025</a></em>",
+    "summary": "We propose CLR-Wire, a unified continuous latent representation that jointly encodes geometric curves and topological connections for coherent 3D wireframe generation.",
+    "thumb": "images/clr_wire.png",
+    "video": "images/clr_wire.mp4",
+    "project": "https://vcc.tech/research/2025/CLRWire",
+    "links": [
+      { "text": "Project page", "href": "https://vcc.tech/research/2025/CLRWire" },
+      { "text": "ArXiv", "href": "https://arxiv.org/abs/2504.19174" },
+      { "text": "Paper", "href": "https://dl.acm.org/doi/10.1145/3721238.3730638" }
+    ]
+  },
+  {
+    "title": "GenUDC: High Quality 3D Mesh Generation With Unsigned Dual Contouring Representation",
+    "authors": [
+      { "name": "Ruowei Wang", "url": "https://scholar.google.com/citations?user=_-R8Wn8AAAAJ" },
+      { "name": "Jiaqi Li", "url": "https://openreview.net/profile?id=~Jiaqi_Li13" },
+      { "name": "Dan Zeng", "url": "https://openreview.net/profile?id=~Dan_Zeng4" },
+      { "name": "Xueqi Ma", "self": true },
+      { "name": "Zixiang Xu", "url": "https://openreview.net/profile?id=~Xu_Zixiang1" },
+      { "name": "Jianwei Zhang", "url": "https://openreview.net/profile?id=~Jianwei_Zhang6" },
+      { "name": "Qijun Zhao", "url": "https://openreview.net/profile?id=~Qijun_Zhao1" }
+    ],
+    "venue_html": "<em><a href=\"https://2024.acmmm.org/\" target=\"_blank\" rel=\"noopener\">ACM MM 2024</a></em>",
+    "summary": "A generative framework leveraging Unsigned Dual Contouring (UDC) to improve mesh quality and memory efficiency.",
+    "thumb": "images/genudc.png",
+    "video": "",
+    "links": [
+      { "text": "Paper", "href": "https://dl.acm.org/doi/10.1145/3664647.3681241" }
+    ]
+  },
+  {
+    "title": "Generating 3D House Wireframes with Semantics",
+    "authors": [
+      { "name": "Xueqi Ma", "self": true },
+      { "name": "Yilin Liu", "url": "https://yilinliu77.github.io/" },
+      { "name": "Wenjun Zhou", "url": "https://github.com/wenjune" },
+      { "name": "Ruowei Wang", "url": "https://scholar.google.com/citations?user=_-R8Wn8AAAAJ" },
+      { "name": "Hui Huang", "url": "https://vcc.tech/~huihuang", "star": true }
+    ],
+    "venue_html": "<em><a href=\"https://eccv.ecva.net/\" target=\"_blank\" rel=\"noopener\">ECCV 2024</a></em>",
+    "summary": "An autoregressive approach using a unified wire-based representation for coherent 3D house wireframe generation.",
+    "thumb": "images/house_wireframe.png",
+    "video": "images/house_wireframe.mp4",
+    "project": "https://vcc.tech/research/2024/3DWire",
+    "links": [
+      { "text": "Project page", "href": "https://vcc.tech/research/2024/3DWire" },
+      { "text": "Video", "href": "https://youtu.be/EMzXQeH7hOo?si=fs7LpqngwqZVE94Q" },
+      { "text": "Paper", "href": "https://link.springer.com/chapter/10.1007/978-3-031-72670-5_13" }
+    ]
+  },
+  {
+    "title": "Road Network Extraction of 3D Point Cloud Scene Based on L1-medial Extraction and Flexible Constraints",
+    "authors": [
+      { "name": "Xueqi Ma", "self": true },
+      { "name": "Pengdi Huang", "url": "https://scholar.google.com/citations?user=MKjgy_UAAAAJ" },
+      { "name": "Hui Huang", "url": "https://vcc.tech/~huihuang", "star": true }
+    ],
+    "venue_html": "<em><a href=\"https://www.jcad.cn/indexen.htm\" target=\"_blank\" rel=\"noopener\">Journal of Computer-Aided Design and Computer Graphics, 2023</a></em>",
+    "summary": "Extracts 3D road network structures from large-scale point clouds via L1 medial axis and flexible constraints.",
+    "thumb": "images/road.png",
+    "video": "",
+    "links": [
+      { "text": "Paper", "href": "https://www.jcad.cn/en/article/doi/10.3724/SP.J.1089.2023-00328" }
+    ]
+  }
+]
