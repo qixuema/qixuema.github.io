@@ -1,5 +1,8 @@
 .vscode
 preprocessing/
 data/images/
-gallery/labs/images/raws/
+gallery/labs/images/
+gallery/landscapes/images/
+gallery/scenes/images
+
 .env
