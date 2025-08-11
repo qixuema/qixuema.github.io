@@ -8,6 +8,50 @@ const FULLS_DIR  = `${CDN_ORIGIN}/${ALBUM}/images/fulls/`;
 const PHOTOS = [
   // 2024
   {
+    file: 'Tug-of-War_Winter_2024.jpg',
+    title: 'Tug of War Winter 2024'
+  },
+  {
+    file: 'VCC_2024_Autumn_Camping.jpg',
+    title: 'VCC 2024 Autumn Camping'
+  },
+  {
+    file: 'VCC_2024_Autumn_Camping_2.jpg',
+    title: 'VCC 2024 Autumn Camping 2'
+  },
+  {
+    file: 'VCC_2024_Autumn_Camping_Group_Photo.jpg',
+    title: 'VCC 2024 Autumn Camping Group Photo'
+  },
+  {
+    file: '2024_Welcome_New_Students.png',
+    title: '2024 Welcome New Students'
+  },
+  {
+    file: 'Group_in_Front_of_Conference_Venue.jpg',
+    title: 'Group in Front of Conference Venue'
+  },
+  {
+    file: 'Me_at_Lake_Como.jpeg',
+    title: 'Me at Lake Como'
+  },
+  {
+    file: 'My_ECCV_Poster.jpg',
+    title: 'My ECCV Poster'
+  },
+  {
+    file: 'Poker_Night_at_the_Office.jpg',
+    title: 'Poker Night at the Office'
+  },
+  {
+    file: 'Teachers_Day_2024.jpg',
+    title: 'Teachers Day 2024'
+  },
+  {
+    file: '2024_Lunch_Gathering.jpg',
+    title: '2024 Lunch Gathering'
+  },
+  {
     file: 'Lab_Group_Photo_Shenzhen_University_1.jpeg'
   },
   {
@@ -15,6 +59,10 @@ const PHOTOS = [
   },
   {
     file: 'Lab_Group_Photo_Shenzhen_University_3.jpg'
+  },
+  {
+    file: 'Lab_Group_Photo_Shenzhen_University_5.jpeg',
+    title: 'Lab Group Photo Shenzhen University 5'
   },
   {
     file: 'Haidilao_Gathering_Summer2024.jpg',

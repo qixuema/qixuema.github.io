@@ -6,6 +6,42 @@ const FULLS_DIR  = `${CDN_ORIGIN}/${ALBUM}/images/fulls/`;
 
 // 只需维护这个数组即可
 const PHOTOS = [
+  {
+    file: 'Beautiful_Lake_Como_View.jpg',
+    title: 'Beautiful Lake Como View'
+  },
+  {
+    file: 'Bus_Stop_at_Milan_Airport.jpg',
+    title: 'Bus Stop at Milan Airport'
+  },
+  {
+    file: 'Colorful_Houses_at_Lake_Como_2.jpeg',
+    title: 'Colorful Houses at Lake Como 2'
+  },
+  {
+    file: 'Colorful_Houses_at_Lake_Como_3.jpeg',
+    title: 'Colorful Houses at Lake Como 3'
+  },
+  {
+    file: 'Early_Christian_churches_in_Milan.jpg',
+    title: 'Early Christian Churches in Milan'
+  },
+  {
+    file: 'Lake_Como_Alleyway.jpg',
+    title: 'Lake Como Alleyway'
+  },
+  {
+    file: 'Milan_Cathedral_Sculptures.jpg',
+    title: 'Milan Cathedral Sculptures'
+  },
+  {
+    file: 'Milan_International_Conference_Center.jpg',
+    title: 'Milan International Conference Center'
+  },
+  {
+    file: 'San_Siro.jpg',
+    title: 'San Siro'
+  },  
   { 
     file:'Evening_Skyline_Reflection.jpg',            
     title:'Evening Skyline Reflection', 

@@ -7,6 +7,46 @@ const FULLS_DIR  = `${CDN_ORIGIN}/${ALBUM}/images/fulls/`;
 
 const PHOTOS = [
   {
+    file: 'Arco_della_Pace_Night.jpg',
+    title: 'Arco Della Pace Night'
+  },
+  {
+    file: 'Arco_della_Pace.jpg',
+    title: 'Arco Della Pace'
+  },
+  {
+    file: 'China_National_Football_Team.jpg',
+    title: 'China National Football Team'
+  },
+  {
+    file: 'Colorful_Houses_at_Lake_Como.jpg',
+    title: 'Colorful Houses at Lake Como'
+  },
+  {
+    file: 'Duomo_di_Milano.jpg',
+    title: 'Duomo Di Milano'
+  },
+  {
+    file: 'ECCV_2024.jpg',
+    title: 'ECCV 2024'
+  },
+  {
+    file: 'Lake_Como_Pier.jpg',
+    title: 'Lake Como Pier'
+  },
+  {
+    file: 'Me_ECCV_2024.jpg',
+    title: 'Me ECCV 2024'
+  },
+  {
+    file: 'Milan_Street.jpg',
+    title: 'Milan Street'
+  },
+  {
+    file: 'San_Siro_Model.jpg',
+    title: 'San Siro Model'
+  },  
+  {
     file:'Jiawei.jpg',                                   
     title:'Teacher Jiawei',  
     desc:'Teacher Jiawei at Dameisha Beachfront Promenade.'
