@@ -74,7 +74,8 @@ a:hover{ text-decoration:underline; }
 .media video{ opacity:0; transition:opacity .25s ease; }
 .pub-card:hover .media video{ opacity:1; }
 @media (prefers-reduced-motion: reduce){
-  .media video{ display:none !important; }
+  /* .media video{ display:none !important; } */
+  .media video { transition: none; }
 }
 
 .pub-body{ flex:1; display:flex; flex-direction:column; gap:8px; }
