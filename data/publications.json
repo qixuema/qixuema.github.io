@@ -1,5 +1,39 @@
 [
   {
+    "title": "Hunyuan3D Studio: End-to-End AI Pipeline for Game-Ready 3D Asset Generation",
+    "authors": [
+      { "name": "Xueqi Ma is one of the contributors of Semantic UV."}
+    ],
+    "venue_html": "<em><a href=\"https://3d.hunyuan.tencent.com/\" target=\"_blank\" rel=\"noopener\">Hunyuan3D</a></em>",
+    "summary": "An auto-regressive framework that generates artist-style cutting seams for semantically coherent and low-distortion UV unwrapping.",
+    "thumb": "images/game_studio.png",
+    "links": [
+      { "text": "ArXiv", "href": "https://arxiv.org/abs/2509.12815" }
+    ]
+  },
+  {
+    "title": "Auto Hair Card Extraction for Smooth Hair with Differentiable Rendering",
+    "authors": [
+      { "name": "Zhongtian Zheng", "url": "https://scholar.google.com/citations?user=OUjua5AAAAAJ&hl=en" },
+      { "name": "Tao Huang", "url": "https://dcjmj.github.io/" },
+      { "name": "Haozhe Su", "url": "https://soldierdown.github.io/" },
+      { "name": "Xueqi Ma", "self": true },
+      { "name": "Yuefan Shen", "url": "https://yuefanshen.net/" },
+      { "name": "Tongtong Wang", "url": "https://tongttwang.github.io/" },
+      { "name": "Yin Yang", "url": "https://yangzzzy.github.io/" },
+      { "name": "Xifeng Gao", "url": "https://gaoxifeng.github.io/" },
+      { "name": "Zherong Pan", "url": "https://dyingbrain.github.io/" },
+      { "name": "Kui Wu", "url": "https://kuiwuchn.github.io/", "star": true }
+    ],
+    "venue_html": "<em><a href=\"https://asia.siggraph.org/2025/\" target=\"_blank\" rel=\"noopener\">SIGGRAPH Asia 2025</a></em>",
+    "summary": "This work presents a differentiable-rendering-based method to automatically convert strand-based hair into compact, high-quality hair cards while preserving appearance.",
+    "thumb": "images/diff_hair_card.png",
+    "project": "https://arxiv.org/abs/2505.18805",
+    "links": [
+      { "text": "ArXiv", "href": "https://arxiv.org/abs/2505.18805" }
+    ]
+  },  
+  {
     "title": "CLR-Wire: Towards Continuous Latent Representations for 3D Curve Wireframe Generation",
     "authors": [
       { "name": "Xueqi Ma", "self": true },
